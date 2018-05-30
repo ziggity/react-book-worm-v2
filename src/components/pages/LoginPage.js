@@ -1,13 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import LoginForm from "../forms/LoginForm";
 
-
-const LoginPage = () => (
-    <div>
+class LoginPage extends React.Component {
+  submit = (data) => {
+    console.log(data);
+  };
+  render() {
+    return (
+      <div>
         <h1>login page</h1>
-        <Link to='/'>homepage</Link>
-    </div>
-
-);
+        <LoginForm submit={this.submit} />
+      
+      </div>
+    );
+  }
+}
 
 export default LoginPage;
