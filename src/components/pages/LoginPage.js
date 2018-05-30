@@ -1,17 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import LoginForm from "../forms/LoginForm";
 
 class LoginPage extends React.Component {
-  submit = (data) => {
+  submit = data => {
     console.log(data);
   };
+
   render() {
     return (
       <div>
-        <h1>login page</h1>
+        <h1>Login page</h1>
+
         <LoginForm submit={this.submit} />
-      
       </div>
     );
   }
